@@ -15,34 +15,50 @@
 </head>
 <body>
 
-  <!-- Decorative top papel picado -->
-  <div class="papel-picado">
-    <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="papel">
+  <!-- 💗 Heart Papel Picado Top -->
+  <div class="papel-heart top" aria-hidden="true">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <rect x="0" y="0" width="1200" height="90" class="band band-1"/>
+      <rect x="0" y="0" width="1200" height="90" class="band band-2" opacity="0.9"/>
+      <rect x="0" y="0" width="1200" height="90" class="band band-3" opacity="0.85"/>
+      <path class="scallop" d="M0,90
+        C40,120 80,120 120,90
+        C160,60 200,60 240,90
+        C280,120 320,120 360,90
+        C400,60 440,60 480,90
+        C520,120 560,120 600,90
+        C640,60 680,60 720,90
+        C760,120 800,120 840,90
+        C880,60 920,60 960,90
+        C1000,120 1040,120 1080,90
+        C1120,60 1160,60 1200,90
+        L1200,0 L0,0 Z"/>
       <defs>
-        <pattern id="cut" width="60" height="60" patternUnits="userSpaceOnUse">
-          <circle cx="30" cy="30" r="8" />
-          <circle cx="10" cy="10" r="5" />
-          <circle cx="50" cy="10" r="5" />
-          <circle cx="10" cy="50" r="5" />
-          <circle cx="50" cy="50" r="5" />
-        </pattern>
+        <path id="heart" d="M12 8 C12 -2 28 -2 28 8 C28 14 22 18 20 20 C18 18 12 14 12 8 Z"/>
       </defs>
-      <rect width="1200" height="120" class="panel panel-1"/>
-      <rect y="0" width="1200" height="120" class="panel panel-2" opacity="0.9"/>
-      <rect y="0" width="1200" height="120" class="panel panel-3" opacity="0.85"/>
-      <g fill="currentColor">
-        <path d="M0,90 C40,120 80,120 120,90
-                 C160,60 200,60 240,90
-                 C280,120 320,120 360,90
-                 C400,60 440,60 480,90
-                 C520,120 560,120 600,90
-                 C640,60 680,60 720,90
-                 C760,120 800,120 840,90
-                 C880,60 920,60 960,90
-                 C1000,120 1040,120 1080,90
-                 C1120,60 1160,60 1200,90 L1200,0 L0,0 Z"/>
+      <g class="holes">
+        <!-- 20 hearts -->
+        <g transform="translate(20,18)"><use href="#heart"/></g>
+        <g transform="translate(80,18)"><use href="#heart"/></g>
+        <g transform="translate(140,18)"><use href="#heart"/></g>
+        <g transform="translate(200,18)"><use href="#heart"/></g>
+        <g transform="translate(260,18)"><use href="#heart"/></g>
+        <g transform="translate(320,18)"><use href="#heart"/></g>
+        <g transform="translate(380,18)"><use href="#heart"/></g>
+        <g transform="translate(440,18)"><use href="#heart"/></g>
+        <g transform="translate(500,18)"><use href="#heart"/></g>
+        <g transform="translate(560,18)"><use href="#heart"/></g>
+        <g transform="translate(620,18)"><use href="#heart"/></g>
+        <g transform="translate(680,18)"><use href="#heart"/></g>
+        <g transform="translate(740,18)"><use href="#heart"/></g>
+        <g transform="translate(800,18)"><use href="#heart"/></g>
+        <g transform="translate(860,18)"><use href="#heart"/></g>
+        <g transform="translate(920,18)"><use href="#heart"/></g>
+        <g transform="translate(980,18)"><use href="#heart"/></g>
+        <g transform="translate(1040,18)"><use href="#heart"/></g>
+        <g transform="translate(1100,18)"><use href="#heart"/></g>
+        <g transform="translate(1160,18)"><use href="#heart"/></g>
       </g>
-      <rect width="1200" height="90" fill="url(#cut)" class="holes"/>
     </svg>
   </div>
 
@@ -50,14 +66,12 @@
     <div class="container">
       <h1>Hi, I’m <span>Damari Aguilar</span></h1>
       <p class="intro">
-        A <strong>first-gen Mexican-American</strong> student — software engineer in the making and creator at heart.  
-        Passionate about combining creativity with technology to bring ideas to life through design and code.
+        A <b>first-gen Mexican-American</b> student — software engineer in the making and creator at heart.
+        I love blending engineering with design to turn ideas into real things people can use and enjoy.
       </p>
 
-      <!-- Profile picture -->
       <img src="assets/img/Picture.jpg" alt="Damari Aguilar" class="profile-pic" />
 
-      <!-- Contact links -->
       <div class="contact-links">
         <a href="mailto:adamari@umich.edu"><i class="fa-solid fa-envelope"></i> adamari@umich.edu</a>
         <span class="dot">•</span>
@@ -71,7 +85,7 @@
       </div>
 
       <div class="cta">
-        <a href="assets/resume/Damari_Aguilar_Resume.pdf" class="btn" target="_blank">
+        <a href="assets/resume/Damari%20Resume.pdf" class="btn" target="_blank" rel="noopener">
           <i class="fa-solid fa-file-arrow-down"></i> View My Resume
         </a>
       </div>
@@ -79,11 +93,10 @@
   </header>
 
   <main>
-    <!-- Frameworks & Libraries -->
     <section id="skills" class="section">
       <div class="container">
         <h2>Frameworks & Libraries</h2>
-        <p class="hint">A quick snapshot of the tools I use in my coursework and projects.</p>
+        <p class="hint">A quick snapshot of tools I actually use in school and projects.</p>
         <ul class="pill-list">
           <li>Git / GitHub</li>
           <li>IntelliJ IDEA</li>
@@ -96,7 +109,6 @@
       </div>
     </section>
 
-    <!-- Education -->
     <section id="education" class="section alt">
       <div class="container">
         <h2>Education</h2>
@@ -114,34 +126,25 @@
     </section>
   </main>
 
-  <!-- Decorative bottom papel picado -->
-  <div class="papel-picado bottom">
-    <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="papel flip">
-      <defs>
-        <pattern id="cut2" width="60" height="60" patternUnits="userSpaceOnUse">
-          <circle cx="30" cy="30" r="8" />
-          <circle cx="10" cy="10" r="5" />
-          <circle cx="50" cy="10" r="5" />
-          <circle cx="10" cy="50" r="5" />
-          <circle cx="50" cy="50" r="5" />
-        </pattern>
-      </defs>
-      <rect width="1200" height="120" class="panel panel-1"/>
-      <rect y="0" width="1200" height="120" class="panel panel-2" opacity="0.9"/>
-      <rect y="0" width="1200" height="120" class="panel panel-3" opacity="0.85"/>
-      <g fill="currentColor">
-        <path d="M0,30 C40,0 80,0 120,30
-                 C160,60 200,60 240,30
-                 C280,0 320,0 360,30
-                 C400,60 440,60 480,30
-                 C520,0 560,0 600,30
-                 C640,60 680,60 720,30
-                 C760,0 800,0 840,30
-                 C880,60 920,60 960,30
-                 C1000,0 1040,0 1080,30
-                 C1120,60 1160,60 1200,30 L1200,120 L0,120 Z"/>
-      </g>
-      <rect y="30" width="1200" height="90" fill="url(#cut2)" class="holes"/>
+  <!-- 💗 Heart Papel Picado Bottom -->
+  <div class="papel-heart bottom" aria-hidden="true">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <rect x="0" y="30" width="1200" height="90" class="band band-1"/>
+      <rect x="0" y="30" width="1200" height="90" class="band band-2" opacity="0.9"/>
+      <rect x="0" y="30" width="1200" height="90" class="band band-3" opacity="0.85"/>
+      <path class="scallop" d="M0,30
+        C40,0 80,0 120,30
+        C160,60 200,60 240,30
+        C280,0 320,0 360,30
+        C400,60 440,60 480,30
+        C520,0 560,0 600,30
+        C640,60 680,60 720,30
+        C760,0 800,0 840,30
+        C880,60 920,60 960,30
+        C1000,0 1040,0 1080,30
+        C1120,60 1160,60 1200,30
+        L1200,120 L0,120 Z"/>
+      <use href="#heart" transform="translate(20,60)"/>
     </svg>
   </div>
 

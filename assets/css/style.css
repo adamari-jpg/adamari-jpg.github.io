@@ -1,176 +1,188 @@
-/* 🌸 Día de los Muertos Theme – Soft Pastel Version for Damari Aguilar 💞 */
+/* 🌸 Día de los Muertos – Soft Pastel Theme for Damari Aguilar 💞 */
 
-/* Base Colors – soft papel cortado inspired */
-:root {
+/* ---------- Palette ---------- */
+:root{
   --bg-cream: #fffaf4;
   --soft-orange: #ffcb77;
   --soft-pink: #f9a8d4;
   --soft-turquoise: #9ae6e8;
   --soft-purple: #d5b7ff;
   --text-dark: #333;
+  --text-muted: #555;
+  --shadow: 0 6px 20px rgba(0,0,0,.12);
 }
 
-/* General Body */
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: var(--bg-cream);
+/* ---------- Base ---------- */
+*{ box-sizing: border-box; }
+html, body{ margin:0; padding:0; }
+body{
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg-cream);
   color: var(--text-dark);
-  margin: 0;
-  padding: 0;
+  line-height: 1.6;
   scroll-behavior: smooth;
 }
+a{ color: inherit; text-decoration: none; }
+img{ max-width: 100%; display: block; }
 
-/* Header / Hero Section */
-header.hero {
+/* ---------- Papel Picado Banners (top & bottom wrappers) ---------- */
+.papel-picado{
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+}
+.papel-picado svg{
+  width: 100%;
+  height: 120px;
+  display: block;
+}
+.papel.flip{ transform: rotate(180deg); }
+
+/* Panel colors & perforation fill */
+.papel-picado .panel-1{ fill: var(--soft-orange); }
+.papel-picado .panel-2{ fill: var(--soft-pink); opacity: .85; }
+.papel-picado .panel-3{ fill: var(--soft-turquoise); opacity: .75; }
+.papel-picado .holes{ fill: rgba(255,255,255,.85); }
+
+/* ---------- Header / Hero ---------- */
+.hero{
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 4rem 2rem 3rem;
   color: var(--text-dark);
-  background: var(--bg-cream) url('../img/A_seamless_digital_pattern_in_traditional_Mexican_.png') repeat;
-  background-size: 400px;
+  background:
+    var(--bg-cream)
+    url("../img/A_seamless_digital_pattern_in_traditional_Mexican_.png")
+    repeat;
+  background-size: 360px;
   border-bottom: 5px solid var(--soft-orange);
 }
+.hero .container{ max-width: 1000px; margin: 0 auto; }
 
-/* Name and Intro */
-header.hero h1 {
-  font-size: 2.8rem;
+.hero h1{
+  font-size: clamp(2.1rem, 3.2vw + 1.4rem, 3rem);
   font-weight: 700;
+  margin: .25rem 0 .5rem;
   color: var(--soft-purple);
-  margin-bottom: 0.5rem;
+}
+.hero h1 span{ color: var(--soft-pink); }
+.hero .intro{
+  max-width: 760px;
+  margin: .75rem auto 1.75rem;
+  font-size: clamp(1rem, .6vw + .9rem, 1.15rem);
+  color: var(--text-muted);
 }
 
-header.hero h1 span {
-  color: var(--soft-pink);
-}
-
-header.hero p.intro {
-  max-width: 700px;
-  margin: 1rem auto 2rem;
-  font-size: 1.2rem;
-  color: #444;
-  line-height: 1.6;
-}
-
-/* Profile Picture */
-.profile-pic {
-  display: block;
+/* Profile photo */
+.profile-pic{
   width: 160px;
   height: 160px;
+  margin: 16px auto 10px;
   object-fit: cover;
   border-radius: 50%;
   border: 4px solid var(--soft-pink);
-  margin: 20px auto 10px auto;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: var(--shadow);
+}
+@media (max-width: 480px){
+  .profile-pic{ width: 120px; height: 120px; }
 }
 
-/* Contact Links */
-.contact-links {
-  margin: 1rem 0;
+/* ---------- Contact Links ---------- */
+.contact-links{
+  margin: .75rem 0 1.25rem;
   font-size: 1rem;
 }
-
-.contact-links a {
-  color: var(--text-dark);
-  text-decoration: none;
-  margin: 0 8px;
-  font-weight: 500;
+.contact-links .dot{ margin: 0 .35rem; opacity: .5; }
+.contact-links a{
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  padding: .3rem .55rem;
+  border-radius: 999px;
+  transition: transform .15s ease, background .2s ease;
 }
-
-.contact-links a:hover {
-  color: var(--soft-pink);
+.contact-links a:hover{
+  background: rgba(0,0,0,.04);
+  transform: translateY(-1px);
 }
+.contact-links i{ font-size: 1.05rem; }
 
-/* Resume Button */
-.btn {
+/* ---------- Buttons ---------- */
+.btn{
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .8rem 1.4rem;
   background: var(--soft-pink);
-  color: white;
-  padding: 0.8rem 1.5rem;
-  border-radius: 25px;
-  font-weight: 600;
-  text-decoration: none;
-  display: inline-block;
-  transition: background 0.3s ease, transform 0.2s ease;
+  color: #121212;
+  font-weight: 700;
+  border-radius: 26px;
+  box-shadow: var(--shadow);
+  transition: transform .15s ease, background .2s ease, box-shadow .2s ease;
 }
-
-.btn:hover {
+.btn:hover{
   background: var(--soft-orange);
-  transform: scale(1.05);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(0,0,0,.16);
 }
 
-/* Sections */
-.section {
+/* ---------- Sections ---------- */
+.section{
   padding: 3rem 2rem;
   border-bottom: 2px dashed var(--soft-turquoise);
 }
+.section.alt{ background: rgba(255,255,255,.6); }
+.container{ max-width: 1000px; margin: 0 auto; }
 
-.section h2 {
+.section h2{
   text-align: center;
+  margin: 0 0 1rem;
   color: var(--soft-purple);
-  margin-bottom: 1rem;
+  font-size: clamp(1.4rem, 1.2vw + 1rem, 1.9rem);
+}
+.hint{
+  text-align: center;
+  margin: 0 auto 1.2rem;
+  color: var(--text-muted);
 }
 
-/* Skills Pills */
-.pill-list {
+/* ---------- Skills Pills ---------- */
+.pill-list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
-  list-style: none;
-  padding: 0;
+  gap: .8rem 1rem;
 }
-
-.pill-list li {
+.pill-list li{
   background: var(--soft-turquoise);
-  color: #333;
-  padding: 0.8rem 1.3rem;
-  border-radius: 20px;
+  color: #222;
+  padding: .65rem 1.1rem;
+  border-radius: 999px;
   font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
 }
 
-/* Education */
-.edu h3 {
-  color: var(--soft-pink);
+/* ---------- Education ---------- */
+.edu{
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
 }
+.edu h3{ color: var(--soft-pink); margin: .2rem 0; }
+.edu p{ margin: 0; color: var(--text-muted); }
 
-/* Papel Picado Decorations */
-.papel-picado svg {
-  width: 100%;
-  height: 120px;
-}
-
-.papel-picado .panel-1 { fill: var(--soft-orange); }
-.papel-picado .panel-2 { fill: var(--soft-pink); opacity: 0.8; }
-.papel-picado .panel-3 { fill: var(--soft-turquoise); opacity: 0.7; }
-.papel-picado .holes { fill: rgba(255,255,255,0.8); }
-
-.papel.flip {
-  transform: rotate(180deg);
-}
-
-/* 💞 Heart-shaped cutouts instead of circles */
-.papel-picado svg defs pattern circle {
-  display: none;
-}
-
-.papel-picado svg defs pattern path {
-  fill: rgba(255, 255, 255, 0.8);
-}
-
-/* Replace default pattern with hearts */
-.papel-picado svg defs pattern#cut path,
-.papel-picado svg defs pattern#cut2 path {
-  d: path("M30 40 C20 30, 10 20, 30 10 C50 20, 40 30, 30 40 Z");
-}
-
-/* Footer */
-footer {
+/* ---------- Footer ---------- */
+footer{
   text-align: center;
   background: var(--soft-purple);
-  color: white;
-  padding: 1.5rem;
+  color: #111;
+  padding: 1.4rem 1rem;
   border-top: 5px solid var(--soft-orange);
-  font-size: 0.95rem;
+  font-size: .95rem;
 }
+footer p{ margin: 0; }
 
-footer p {
-  margin: 0;
-}
+/* ---------- Utility ---------- */
+.text-center{ text-align: center; }
