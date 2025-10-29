@@ -1,145 +1,176 @@
-/* 🎉 Día de los Muertos Theme for Damari Aguilar’s Portfolio 💀 */
+/* 🌸 Día de los Muertos Theme – Soft Pastel Version for Damari Aguilar 💞 */
 
-/* Base Colors inspired by papel picado and marigolds */
+/* Base Colors – soft papel cortado inspired */
 :root {
-  --main-bg: #1a1a1a;
-  --accent-orange: #f59e0b;
-  --accent-pink: #ec4899;
-  --accent-purple: #8b5cf6;
-  --text-light: #fef9c3;
-  --text-muted: #d4d4d8;
+  --bg-cream: #fffaf4;
+  --soft-orange: #ffcb77;
+  --soft-pink: #f9a8d4;
+  --soft-turquoise: #9ae6e8;
+  --soft-purple: #d5b7ff;
+  --text-dark: #333;
 }
 
-/* General body styling */
+/* General Body */
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: var(--main-bg);
-  color: var(--text-light);
+  background-color: var(--bg-cream);
+  color: var(--text-dark);
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
 }
 
-/* Header */
-header {
-  background: linear-gradient(135deg, var(--accent-purple), var(--accent-pink));
-  color: white;
-  padding: 2rem;
+/* Header / Hero Section */
+header.hero {
   text-align: center;
-  border-bottom: 4px solid var(--accent-orange);
+  padding: 4rem 2rem;
+  color: var(--text-dark);
+  background: var(--bg-cream) url('../img/A_seamless_digital_pattern_in_traditional_Mexican_.png') repeat;
+  background-size: 400px;
+  border-bottom: 5px solid var(--soft-orange);
 }
 
-header h1 {
-  font-size: 2.5rem;
-  margin: 0;
-  font-family: 'Cursive';
+/* Name and Intro */
+header.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--soft-purple);
+  margin-bottom: 0.5rem;
 }
 
-header p {
+header.hero h1 span {
+  color: var(--soft-pink);
+}
+
+header.hero p.intro {
+  max-width: 700px;
+  margin: 1rem auto 2rem;
   font-size: 1.2rem;
-  color: var(--text-muted);
+  color: #444;
+  line-height: 1.6;
 }
 
-/* Hero Section */
-.hero {
-  background: url('../img/papel-picado-pattern.png') repeat center center;
-  background-size: cover;
-  text-align: center;
-  padding: 5rem 2rem;
-  color: var(--text-light);
-  border-bottom: 2px solid var(--accent-orange);
+/* Profile Picture */
+.profile-pic {
+  display: block;
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--soft-pink);
+  margin: 20px auto 10px auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-.hero h2 {
-  font-size: 2.5rem;
-  color: var(--accent-orange);
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+/* Contact Links */
+.contact-links {
+  margin: 1rem 0;
+  font-size: 1rem;
 }
 
-.hero p {
-  font-size: 1.3rem;
+.contact-links a {
+  color: var(--text-dark);
+  text-decoration: none;
+  margin: 0 8px;
+  font-weight: 500;
 }
 
-/* Buttons */
+.contact-links a:hover {
+  color: var(--soft-pink);
+}
+
+/* Resume Button */
 .btn {
-  background: var(--accent-orange);
-  border: none;
+  background: var(--soft-pink);
   color: white;
   padding: 0.8rem 1.5rem;
-  margin: 1rem;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: 0.3s;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .btn:hover {
-  background: var(--accent-pink);
+  background: var(--soft-orange);
   transform: scale(1.05);
 }
 
 /* Sections */
-section {
+.section {
   padding: 3rem 2rem;
-  border-bottom: 1px dashed var(--accent-purple);
+  border-bottom: 2px dashed var(--soft-turquoise);
 }
 
-section h2 {
+.section h2 {
   text-align: center;
-  font-size: 2rem;
-  color: var(--accent-orange);
+  color: var(--soft-purple);
   margin-bottom: 1rem;
 }
 
-/* Skills Section */
-.skills-list {
+/* Skills Pills */
+.pill-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
+  list-style: none;
+  padding: 0;
 }
 
-.skill {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid var(--accent-purple);
-  color: var(--text-light);
-  padding: 1rem 1.5rem;
-  border-radius: 8px;
+.pill-list li {
+  background: var(--soft-turquoise);
+  color: #333;
+  padding: 0.8rem 1.3rem;
+  border-radius: 20px;
   font-weight: 600;
-  text-align: center;
+}
+
+/* Education */
+.edu h3 {
+  color: var(--soft-pink);
+}
+
+/* Papel Picado Decorations */
+.papel-picado svg {
+  width: 100%;
+  height: 120px;
+}
+
+.papel-picado .panel-1 { fill: var(--soft-orange); }
+.papel-picado .panel-2 { fill: var(--soft-pink); opacity: 0.8; }
+.papel-picado .panel-3 { fill: var(--soft-turquoise); opacity: 0.7; }
+.papel-picado .holes { fill: rgba(255,255,255,0.8); }
+
+.papel.flip {
+  transform: rotate(180deg);
+}
+
+/* 💞 Heart-shaped cutouts instead of circles */
+.papel-picado svg defs pattern circle {
+  display: none;
+}
+
+.papel-picado svg defs pattern path {
+  fill: rgba(255, 255, 255, 0.8);
+}
+
+/* Replace default pattern with hearts */
+.papel-picado svg defs pattern#cut path,
+.papel-picado svg defs pattern#cut2 path {
+  d: path("M30 40 C20 30, 10 20, 30 10 C50 20, 40 30, 30 40 Z");
 }
 
 /* Footer */
 footer {
-  background: var(--accent-purple);
-  color: var(--text-light);
   text-align: center;
-  padding: 1.5rem;
-  font-size: 0.9rem;
-  border-top: 4px solid var(--accent-orange);
-}
-
-footer a {
-  color: var(--accent-orange);
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* Resume Button */
-.resume-link {
-  display: block;
-  width: fit-content;
-  margin: 2rem auto;
-  font-size: 1.1rem;
-  background: var(--accent-pink);
+  background: var(--soft-purple);
   color: white;
-  padding: 0.8rem 1.6rem;
-  border-radius: 25px;
-  transition: background 0.3s ease;
+  padding: 1.5rem;
+  border-top: 5px solid var(--soft-orange);
+  font-size: 0.95rem;
 }
 
-.resume-link:hover {
-  background: var(--accent-orange);
+footer p {
+  margin: 0;
 }
