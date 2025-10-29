@@ -15,53 +15,60 @@
 </head>
 <body>
 
-  <!-- 💗 Heart Papel Picado Top -->
-  <div class="papel-heart top" aria-hidden="true">
-    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-      <rect x="0" y="0" width="1200" height="90" class="band band-1"/>
-      <rect x="0" y="0" width="1200" height="90" class="band band-2" opacity="0.9"/>
-      <rect x="0" y="0" width="1200" height="90" class="band band-3" opacity="0.85"/>
-      <path class="scallop" d="M0,90
-        C40,120 80,120 120,90
-        C160,60 200,60 240,90
-        C280,120 320,120 360,90
-        C400,60 440,60 480,90
-        C520,120 560,120 600,90
-        C640,60 680,60 720,90
-        C760,120 800,120 840,90
-        C880,60 920,60 960,90
-        C1000,120 1040,120 1080,90
-        C1120,60 1160,60 1200,90
-        L1200,0 L0,0 Z"/>
+  <!-- =========================
+       💗 Heart Papel Picado (TOP)
+       ========================= -->
+  <div class="papel-picado top" aria-hidden="true">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="papel">
       <defs>
-        <path id="heart" d="M12 8 C12 -2 28 -2 28 8 C28 14 22 18 20 20 C18 18 12 14 12 8 Z"/>
+        <!-- Reusable heart shape -->
+        <symbol id="heart-tile" viewBox="0 0 60 60">
+          <path fill="rgba(255,255,255,0.85)"
+                d="M30 40
+                   C30 32, 22 30, 22 24
+                   C22 20, 26 18, 30 21
+                   C34 18, 38 20, 38 24
+                   C38 30, 30 32, 30 40 Z"/>
+        </symbol>
+
+        <!-- Heart perforation pattern (tiled 60x60) -->
+        <pattern id="cut" width="60" height="60" patternUnits="userSpaceOnUse">
+          <!-- center -->
+          <use href="#heart-tile" x="0" y="0"/>
+          <!-- four corners smaller -->
+          <use href="#heart-tile" x="-15" y="-15" transform="scale(0.6)"/>
+          <use href="#heart-tile" x="45"  y="-15" transform="scale(0.6)"/>
+          <use href="#heart-tile" x="-15" y="45"  transform="scale(0.6)"/>
+          <use href="#heart-tile" x="45"  y="45"  transform="scale(0.6)"/>
+        </pattern>
       </defs>
-      <g class="holes">
-        <!-- 20 hearts -->
-        <g transform="translate(20,18)"><use href="#heart"/></g>
-        <g transform="translate(80,18)"><use href="#heart"/></g>
-        <g transform="translate(140,18)"><use href="#heart"/></g>
-        <g transform="translate(200,18)"><use href="#heart"/></g>
-        <g transform="translate(260,18)"><use href="#heart"/></g>
-        <g transform="translate(320,18)"><use href="#heart"/></g>
-        <g transform="translate(380,18)"><use href="#heart"/></g>
-        <g transform="translate(440,18)"><use href="#heart"/></g>
-        <g transform="translate(500,18)"><use href="#heart"/></g>
-        <g transform="translate(560,18)"><use href="#heart"/></g>
-        <g transform="translate(620,18)"><use href="#heart"/></g>
-        <g transform="translate(680,18)"><use href="#heart"/></g>
-        <g transform="translate(740,18)"><use href="#heart"/></g>
-        <g transform="translate(800,18)"><use href="#heart"/></g>
-        <g transform="translate(860,18)"><use href="#heart"/></g>
-        <g transform="translate(920,18)"><use href="#heart"/></g>
-        <g transform="translate(980,18)"><use href="#heart"/></g>
-        <g transform="translate(1040,18)"><use href="#heart"/></g>
-        <g transform="translate(1100,18)"><use href="#heart"/></g>
-        <g transform="translate(1160,18)"><use href="#heart"/></g>
-      </g>
+
+      <!-- pastel bands -->
+      <rect x="0" y="0" width="1200" height="90" class="panel panel-1"/>
+      <rect x="0" y="0" width="1200" height="90" class="panel panel-2" opacity="0.9"/>
+      <rect x="0" y="0" width="1200" height="90" class="panel panel-3" opacity="0.85"/>
+
+      <!-- scalloped edge -->
+      <path d="M0,90 C40,120 80,120 120,90
+               C160,60 200,60 240,90
+               C280,120 320,120 360,90
+               C400,60 440,60 480,90
+               C520,120 560,120 600,90
+               C640,60 680,60 720,90
+               C760,120 800,120 840,90
+               C880,60 920,60 960,90
+               C1000,120 1040,120 1080,90
+               C1120,60 1160,60 1200,90 L1200,0 L0,0 Z"
+            fill="rgba(0,0,0,0.06)"/>
+
+      <!-- heart "holes" -->
+      <rect width="1200" height="90" fill="url(#cut)" class="holes"/>
     </svg>
   </div>
 
+  <!-- =========================
+       HERO / HEADER
+       ========================= -->
   <header class="hero">
     <div class="container">
       <h1>Hi, I’m <span>Damari Aguilar</span></h1>
@@ -70,20 +77,23 @@
         I love blending engineering with design to turn ideas into real things people can use and enjoy.
       </p>
 
+      <!-- profile photo -->
       <img src="assets/img/Picture.jpg" alt="Damari Aguilar" class="profile-pic" />
 
+      <!-- contacts -->
       <div class="contact-links">
         <a href="mailto:adamari@umich.edu"><i class="fa-solid fa-envelope"></i> adamari@umich.edu</a>
         <span class="dot">•</span>
-        <a href="https://www.linkedin.com/in/damari-aguilar-864337216/" target="_blank">
+        <a href="https://www.linkedin.com/in/damari-aguilar-864337216/" target="_blank" rel="noopener">
           <i class="fa-brands fa-linkedin"></i> LinkedIn
         </a>
         <span class="dot">•</span>
-        <a href="https://github.com/adamari-jpg" target="_blank">
+        <a href="https://github.com/adamari-jpg" target="_blank" rel="noopener">
           <i class="fa-brands fa-github"></i> GitHub
         </a>
       </div>
 
+      <!-- resume (Option B: space encoded) -->
       <div class="cta">
         <a href="assets/resume/Damari%20Resume.pdf" class="btn" target="_blank" rel="noopener">
           <i class="fa-solid fa-file-arrow-down"></i> View My Resume
@@ -92,6 +102,24 @@
     </div>
   </header>
 
+  <!-- =========================
+       ABOUT ME
+       ========================= -->
+  <section id="about" class="section alt">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        I’m a first-generation college student and proud Mexican-American pursuing my Bachelor’s in Software Engineering
+        at the University of Michigan–Flint. I love building useful, friendly software and bringing ideas to life through
+        code and design. Outside of classes, I run a small creative business where I make custom pieces—from laser-engraved
+        art to graphics and apparel—because building things people enjoy is what motivates me.
+      </p>
+    </div>
+  </section>
+
+  <!-- =========================
+       SKILLS
+       ========================= -->
   <main>
     <section id="skills" class="section">
       <div class="container">
@@ -109,6 +137,9 @@
       </div>
     </section>
 
+    <!-- =========================
+         EDUCATION
+         ========================= -->
     <section id="education" class="section alt">
       <div class="container">
         <h2>Education</h2>
@@ -126,28 +157,56 @@
     </section>
   </main>
 
-  <!-- 💗 Heart Papel Picado Bottom -->
-  <div class="papel-heart bottom" aria-hidden="true">
-    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-      <rect x="0" y="30" width="1200" height="90" class="band band-1"/>
-      <rect x="0" y="30" width="1200" height="90" class="band band-2" opacity="0.9"/>
-      <rect x="0" y="30" width="1200" height="90" class="band band-3" opacity="0.85"/>
-      <path class="scallop" d="M0,30
-        C40,0 80,0 120,30
-        C160,60 200,60 240,30
-        C280,0 320,0 360,30
-        C400,60 440,60 480,30
-        C520,0 560,0 600,30
-        C640,60 680,60 720,30
-        C760,0 800,0 840,30
-        C880,60 920,60 960,30
-        C1000,0 1040,0 1080,30
-        C1120,60 1160,60 1200,30
-        L1200,120 L0,120 Z"/>
-      <use href="#heart" transform="translate(20,60)"/>
+  <!-- =========================
+       💗 Heart Papel Picado (BOTTOM)
+       ========================= -->
+  <div class="papel-picado bottom" aria-hidden="true">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="papel flip">
+      <defs>
+        <!-- same heart & pattern, different id -->
+        <symbol id="heart-tile-2" viewBox="0 0 60 60">
+          <path fill="rgba(255,255,255,0.85)"
+                d="M30 40
+                   C30 32, 22 30, 22 24
+                   C22 20, 26 18, 30 21
+                   C34 18, 38 20, 38 24
+                   C38 30, 30 32, 30 40 Z"/>
+        </symbol>
+        <pattern id="cut2" width="60" height="60" patternUnits="userSpaceOnUse">
+          <use href="#heart-tile-2" x="0" y="0"/>
+          <use href="#heart-tile-2" x="-15" y="-15" transform="scale(0.6)"/>
+          <use href="#heart-tile-2" x="45"  y="-15" transform="scale(0.6)"/>
+          <use href="#heart-tile-2" x="-15" y="45"  transform="scale(0.6)"/>
+          <use href="#heart-tile-2" x="45"  y="45"  transform="scale(0.6)"/>
+        </pattern>
+      </defs>
+
+      <!-- pastel bands -->
+      <rect x="0" y="30" width="1200" height="90" class="panel panel-1"/>
+      <rect x="0" y="30" width="1200" height="90" class="panel panel-2" opacity="0.9"/>
+      <rect x="0" y="30" width="1200" height="90" class="panel panel-3" opacity="0.85"/>
+
+      <!-- scallop -->
+      <path d="M0,30 C40,0 80,0 120,30
+               C160,60 200,60 240,30
+               C280,0 320,0 360,30
+               C400,60 440,60 480,30
+               C520,0 560,0 600,30
+               C640,60 680,60 720,30
+               C760,0 800,0 840,30
+               C880,60 920,60 960,30
+               C1000,0 1040,0 1080,30
+               C1120,60 1160,60 1200,30 L1200,120 L0,120 Z"
+            fill="rgba(0,0,0,0.06)"/>
+
+      <!-- heart "holes" -->
+      <rect y="30" width="1200" height="90" fill="url(#cut2)" class="holes"/>
     </svg>
   </div>
 
+  <!-- =========================
+       FOOTER
+       ========================= -->
   <footer>
     <p>© 2025 Damari Aguilar • Celebrating code & culture 🌼💀</p>
   </footer>
