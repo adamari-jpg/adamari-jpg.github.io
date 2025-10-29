@@ -17,7 +17,6 @@
 
   <!-- Decorative top papel picado -->
   <div class="papel-picado">
-    <!-- inline SVG so it works without extra files -->
     <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="papel">
       <defs>
         <pattern id="cut" width="60" height="60" patternUnits="userSpaceOnUse">
@@ -31,7 +30,6 @@
       <rect width="1200" height="120" class="panel panel-1"/>
       <rect y="0" width="1200" height="120" class="panel panel-2" opacity="0.9"/>
       <rect y="0" width="1200" height="120" class="panel panel-3" opacity="0.85"/>
-      <!-- scalloped edge -->
       <g fill="currentColor">
         <path d="M0,90 C40,120 80,120 120,90
                  C160,60 200,60 240,90
@@ -44,7 +42,6 @@
                  C1000,120 1040,120 1080,90
                  C1120,60 1160,60 1200,90 L1200,0 L0,0 Z"/>
       </g>
-      <!-- perforations -->
       <rect width="1200" height="90" fill="url(#cut)" class="holes"/>
     </svg>
   </div>
@@ -53,13 +50,14 @@
     <div class="container">
       <h1>Hi, I’m <span>Damari Aguilar</span></h1>
       <p class="intro">
-        A <b>first-gen Mexican-American</b> student — software engineer in the making and creator at heart.
-        I love blending engineering with design to turn ideas into real things people can use and enjoy.
+        A <strong>first-gen Mexican-American</strong> student — software engineer in the making and creator at heart.  
+        Passionate about combining creativity with technology to bring ideas to life through design and code.
       </p>
 
-      <!-- your profile photo (file already placed in assets/img) -->
+      <!-- Profile picture -->
       <img src="assets/img/Picture.jpg" alt="Damari Aguilar" class="profile-pic" />
 
+      <!-- Contact links -->
       <div class="contact-links">
         <a href="mailto:adamari@umich.edu"><i class="fa-solid fa-envelope"></i> adamari@umich.edu</a>
         <span class="dot">•</span>
@@ -85,7 +83,7 @@
     <section id="skills" class="section">
       <div class="container">
         <h2>Frameworks & Libraries</h2>
-        <p class="hint">A quick snapshot of tools I actually use in school and projects.</p>
+        <p class="hint">A quick snapshot of the tools I use in my coursework and projects.</p>
         <ul class="pill-list">
           <li>Git / GitHub</li>
           <li>IntelliJ IDEA</li>
@@ -98,7 +96,7 @@
       </div>
     </section>
 
-    <!-- Education (optional but nice) -->
+    <!-- Education -->
     <section id="education" class="section alt">
       <div class="container">
         <h2>Education</h2>
